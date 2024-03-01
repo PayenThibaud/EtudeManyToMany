@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EtudeManyToMany.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3317833c9801d99abf15986f8a2b579e00b7c1e5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f86ba7a3088758a9f02ec6a618e9899ac2df9a99")]
 [assembly: System.Reflection.AssemblyProductAttribute("EtudeManyToMany.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EtudeManyToMany.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
