@@ -2,6 +2,7 @@ using EcoRideAPI.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
 builder.InjectDependancies();
 
 var app = builder.Build();

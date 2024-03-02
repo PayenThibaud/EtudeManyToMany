@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EtudeManyToMany.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240302084638_initMigration")]
+    [Migration("20240302151754_initMigration")]
     partial class initMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using EtudeManyToMany.API.Data;
 using EtudeManyToMany.Core.Model;
+using EtudeManyToMany.API.Repository;
 
 namespace EcoRideAPI.Extensions
 {
@@ -21,6 +22,8 @@ namespace EcoRideAPI.Extensions
             builder.AddSwagger();
 
             builder.AddDatabase();
+
+            builder.AddRepositories();
 
         }
 
@@ -56,10 +59,19 @@ namespace EcoRideAPI.Extensions
             });
         }
 
+
+
         private static void AddDatabase(this WebApplicationBuilder builder)
         {
             string connectionString = builder.Configuration.GetConnectionString("DefaultConnection")!;
             builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(connectionString));
+        }
+
+        private static void AddRepositories(this WebApplicationBuilder builder)
+        {
+            builder.Services.AddScoped<IRepository<Utilisateur>, UtilisateurRepository>();
+            builder.Services.AddScoped<IRepository<Conducteur>, ConducteurRepository>();
+            builder.Services.AddScoped<IRepository<Passager>, PassagerRepository>();
         }
 
     }
