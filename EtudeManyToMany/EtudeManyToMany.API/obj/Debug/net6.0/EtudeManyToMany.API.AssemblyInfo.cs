@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EtudeManyToMany.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f86ba7a3088758a9f02ec6a618e9899ac2df9a99")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb47b840bf2f6f37ebad6d44709f47406f71dfdb")]
 [assembly: System.Reflection.AssemblyProductAttribute("EtudeManyToMany.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EtudeManyToMany.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

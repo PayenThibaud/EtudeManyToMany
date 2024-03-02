@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using EtudeManyToMany.Core.Model;
+using EtudeManyToMany.Core.Data;
 
 namespace EtudeManyToMany.API.Data
 {
@@ -18,6 +19,13 @@ namespace EtudeManyToMany.API.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Utilisateur>().HasData(InitialModel.Utilisateurs);
+            modelBuilder.Entity<Trajet>().HasData(InitialModel.Trajets);
+            modelBuilder.Entity<Reservation>().HasData(InitialModel.Reservations);
+            modelBuilder.Entity<Passager>().HasData(InitialModel.Passagers);
+            modelBuilder.Entity<Conducteur>().HasData(InitialModel.Conducteurs);
+            modelBuilder.Entity<Administrateur>().HasData(InitialModel.Admins);
+
             modelBuilder.Entity<Utilisateur>()
                 .HasOne(u => u.Conducteur)
                 .WithOne(c => c.Utilisateur)
