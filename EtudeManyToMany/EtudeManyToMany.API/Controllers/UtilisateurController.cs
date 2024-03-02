@@ -38,5 +38,39 @@ namespace EtudeManyToMany.API.Controllers
 
             return Ok(utilisateurs);
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> ChercherUnUtilisateur(int id)
+        {
+            var utilisateur = await _utilisateurRepository.GetById(id);
+
+            if (utilisateur != null)
+            {
+                if (utilisateur.Passager == null)
+                {
+                    utilisateur.Passager = await _passagerRepository.Get(p => p.UtilisateurId == utilisateur.UtilisateurId);
+                }
+
+                if (utilisateur.Conducteur == null)
+                {
+                    utilisateur.Conducteur = await _conducteurRepository.Get(c => c.UtilisateurId == utilisateur.UtilisateurId);
+                }
+
+                return Ok(utilisateur);
+            }
+
+            return NotFound();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AjoutUtilisateur([FromBody] Utilisateur utilisateur)
+        {
+            var utilisateurId = await _utilisateurRepository.Add(utilisateur);
+
+            if (utilisateurId > 0)
+                return CreatedAtAction(nameof(ToutLesUtilisateurs), "Utilisateur ajouter");
+
+            return BadRequest("Oh oh ... des problèmes");
+        }
     }
 }
