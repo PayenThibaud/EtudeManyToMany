@@ -54,15 +54,7 @@ namespace EtudeManyToMany.Core.Data
             new Conducteur
             {
                 ConducteurId = 2,
-                UtilisateurId = 3,
-                Trajets = new List<Trajet>()
-                {
-                    new Trajet
-                    {
-                        LieuDepart = "Paris",
-                        LieuArrivee = "Marseille",
-                    }
-                }
+                UtilisateurId = 2
             }
         };
 
@@ -81,11 +73,13 @@ namespace EtudeManyToMany.Core.Data
         {
             new Reservation
             {
+                ReservationId = 1,
                 TrajetId = 1,
                 PassagerId = 1
             },
             new Reservation
             {
+                ReservationId = 2,
                 TrajetId = 1,
                 PassagerId = 2
             }

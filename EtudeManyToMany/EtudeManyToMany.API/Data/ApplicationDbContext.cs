@@ -50,6 +50,12 @@ namespace EtudeManyToMany.API.Data
                 .HasMany(t => t.Reservations)
                 .WithOne(r => r.Trajet)
                 .HasForeignKey(r => r.TrajetId);
+
+            modelBuilder.Entity<Reservation>()
+                .HasOne(r => r.Trajet)
+                .WithMany(t => t.Reservations)
+                .HasForeignKey(r => r.TrajetId)
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
