@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 
 namespace EtudeManyToMany.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController] // Ajoutez cet attribut
     public class UtilisateurController : ControllerBase
     {
@@ -40,10 +40,12 @@ namespace EtudeManyToMany.API.Controllers
             return Ok(utilisateurs);
         }
 
-        [HttpGet("{id}")]
-        public async Task<IActionResult> ChercherUnUtilisateur(int id)
+
+
+        [HttpGet("{utilisateurId}")]
+        public async Task<IActionResult> ChercherUnUtilisateur(int utilisateurId)
         {
-            var utilisateur = await _utilisateurRepository.GetById(id);
+            var utilisateur = await _utilisateurRepository.GetById(utilisateurId);
 
             if (utilisateur != null)
             {
@@ -63,6 +65,7 @@ namespace EtudeManyToMany.API.Controllers
             return NotFound();
         }
 
+
         [HttpPost]
         public async Task<IActionResult> AjoutUtilisateur([FromBody] Utilisateur utilisateur)
         {
@@ -73,6 +76,8 @@ namespace EtudeManyToMany.API.Controllers
 
             return BadRequest("Oh oh ... des problèmes");
         }
+
+
 
         [HttpPost("ajout-du-Conducteur/{utilisateurId}")]
         public async Task<IActionResult> AjoutConducteur(int utilisateurId, [FromBody] Conducteur conducteur)
@@ -92,6 +97,8 @@ namespace EtudeManyToMany.API.Controllers
             return Ok("Conducteur ajouté avec succès et associé à l'utilisateur");
         }
 
+
+
         [HttpPost("ajout-du-Passager/{utilisateurId}")]
         public async Task<IActionResult> AjoutPassager(int utilisateurId, [FromBody] Passager passager)
         {
@@ -109,6 +116,82 @@ namespace EtudeManyToMany.API.Controllers
 
             return Ok("Passager ajouté avec succès et associé à l'utilisateur");
         }
+
+
+
+        [HttpDelete("Retrait-du-Conducteur/{utilisateurId}")]
+        public async Task<IActionResult> RetraitConducteur(int utilisateurId, int conducteurId)
+        {
+            if (await _utilisateurRepository.GetById(utilisateurId) == null)
+                return BadRequest("Utilisaer introuvable");
+
+            var ing = await _conducteurRepository.GetById(conducteurId);
+
+            if (ing == null)
+                return BadRequest("Conducteur introuvable");
+
+            if (ing.UtilisateurId != utilisateurId)
+                return BadRequest("Conducteur est sur un autre utilisateur");
+
+            if (await _conducteurRepository.Delete(ing.ConducteurId))
+                return Ok("Conducteur retirer");
+
+            return BadRequest("Oh oh ... des problèmes");
+        }
+
+
+
+        [HttpDelete("Retrait-du-Passager/{utilisateurId}")]
+        public async Task<IActionResult> RetraitPassager(int utilisateurId, int passagerId)
+        {
+            if (await _utilisateurRepository.GetById(utilisateurId) == null)
+                return BadRequest("Utilisateur introuvable");
+
+            var ing = await _passagerRepository.GetById(passagerId);
+
+            if (ing == null)
+                return BadRequest("Passager introuvable");
+
+            if (ing.UtilisateurId != utilisateurId)
+                return BadRequest("Passager est sur un autre utilisateur");
+
+            if (await _passagerRepository.Delete(ing.PassagerId))
+                return Ok("Passager retirer");
+
+            return BadRequest("Oh oh ... des problèmes");
+        }
+
+
+
+        [HttpPut("{utilisateurId}")]
+        public async Task<IActionResult> UpdateUtilisateur(int utilisateurId, [FromBody] Utilisateur utilisateur)
+        {
+            var util = await _utilisateurRepository.GetById(utilisateurId);
+            if (util == null)
+                return BadRequest("Utilisateur introuvable");
+
+            utilisateur.UtilisateurId = utilisateurId;
+            if (await _utilisateurRepository.Update(utilisateur))
+                return Ok("Utilisateur mis à jours");
+
+            return BadRequest("Oh oh ... des problèmes");
+        }
+
+
+
+        [HttpDelete("{utilisateurId}")]
+        public async Task<IActionResult> RetraitUtilisateur(int utilisateurId)
+        {
+            var util = await _utilisateurRepository.GetById(utilisateurId);
+            if (util == null)
+                return BadRequest("Utilisateur introuvable");
+
+            if (await _utilisateurRepository.Delete(utilisateurId))
+                return Ok("Utilisateur retirer");
+
+            return BadRequest("Oh oh ... des problèmes");
+        }
+
 
     }
 }
