@@ -1,6 +1,7 @@
 ﻿using EtudeManyToMany.API.Repository;
 using EtudeManyToMany.Core.Model;
 using Microsoft.AspNetCore.Mvc;
+using System.Runtime.InteropServices;
 
 namespace EtudeManyToMany.API.Controllers
 {
@@ -72,5 +73,42 @@ namespace EtudeManyToMany.API.Controllers
 
             return BadRequest("Oh oh ... des problèmes");
         }
+
+        [HttpPost("ajout-du-Conducteur/{utilisateurId}")]
+        public async Task<IActionResult> AjoutConducteur(int utilisateurId, [FromBody] Conducteur conducteur)
+        {
+            var utilisateur = await _utilisateurRepository.GetById(utilisateurId);
+            if (utilisateur == null)
+                return BadRequest("Utilisateur non trouvé");
+
+            var dejaConducteur = await _conducteurRepository.GetById(utilisateurId);
+            if (dejaConducteur != null)
+                return BadRequest("L'utilisateur à déjà un ConducteurId");
+
+            utilisateur.Conducteur = conducteur;
+
+            await _utilisateurRepository.Update(utilisateur);
+
+            return Ok("Conducteur ajouté avec succès et associé à l'utilisateur");
+        }
+
+        [HttpPost("ajout-du-Passager/{utilisateurId}")]
+        public async Task<IActionResult> AjoutPassager(int utilisateurId, [FromBody] Passager passager)
+        {
+            var utilisateur = await _utilisateurRepository.GetById(utilisateurId);
+            if (utilisateur == null)
+                return BadRequest("Utilisateur non trouvé");
+
+            var dejaPassager = await _passagerRepository.GetById(utilisateurId);
+            if (dejaPassager != null)
+                return BadRequest("L'utilisateur à déjà un ConducteurId");
+
+            utilisateur.Passager = passager;
+
+            await _utilisateurRepository.Update(utilisateur);
+
+            return Ok("Passager ajouté avec succès et associé à l'utilisateur");
+        }
+
     }
 }

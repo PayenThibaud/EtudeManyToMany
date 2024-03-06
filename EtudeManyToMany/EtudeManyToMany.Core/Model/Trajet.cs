@@ -17,7 +17,7 @@ namespace EtudeManyToMany.Core.Model
         public int ConducteurId { get; set; }
 
         // Trajet associé à un Conducteur (Many to One)
-        public Conducteur Conducteur { get; set; }
+        public Conducteur? Conducteur { get; set; }
 
         // Liste de réservations pour ce trajet (relation Many To Many)
         public List<Reservation>? Reservations { get; set; }
