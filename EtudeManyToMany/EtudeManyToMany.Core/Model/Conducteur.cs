@@ -12,7 +12,7 @@ namespace EtudeManyToMany.Core.Model
 
         // Conducteur est ASSOCI2 à un Utilisateur (relation One To One)
         public int UtilisateurId { get; set; }
-        public Utilisateur Utilisateur { get; set; }
+        public Utilisateur? Utilisateur { get; set; }
 
         // Liste des trajets proposé par le conducteur (relation Many To One)
         public List<Trajet>? Trajets { get; set; }

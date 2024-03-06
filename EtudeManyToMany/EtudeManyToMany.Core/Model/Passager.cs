@@ -12,7 +12,7 @@ namespace EtudeManyToMany.Core.Model
 
         // Un passager est associé à un Utilisateur (Relation One To One)
         public int UtilisateurId { get; set; }
-        public Utilisateur Utilisateur {  get; set; }
+        public Utilisateur? Utilisateur {  get; set; }
 
         // Liste de réservations par le passagé (relation Many To Many)
         public List<Reservation>? Reservations { get; set; }
