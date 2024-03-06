@@ -72,6 +72,7 @@ namespace EcoRideAPI.Extensions
             builder.Services.AddScoped<IRepository<Utilisateur>, UtilisateurRepository>();
             builder.Services.AddScoped<IRepository<Conducteur>, ConducteurRepository>();
             builder.Services.AddScoped<IRepository<Passager>, PassagerRepository>();
+            builder.Services.AddScoped<IRepository<Trajet>, TrajetRepository>();
         }
 
     }
