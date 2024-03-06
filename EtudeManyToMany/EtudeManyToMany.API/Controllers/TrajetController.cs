@@ -10,10 +10,12 @@ namespace EtudeManyToMany.API.Controllers
     public class TrajetController : ControllerBase
     {
         private readonly IRepository<Trajet> _trajetRepository;
+        private readonly IRepository<Reservation> _reservationRepository;
 
-        public TrajetController(IRepository<Trajet> trajetRepository)
+        public TrajetController(IRepository<Trajet> trajetRepository, IRepository<Reservation> reservationRepository)
         {
             _trajetRepository = trajetRepository;
+            _reservationRepository = reservationRepository;
         }
 
 
@@ -21,8 +23,17 @@ namespace EtudeManyToMany.API.Controllers
         [HttpGet]
         public async Task<IActionResult> ToutLesTrajets()
         {
-            return Ok(await _trajetRepository.GetAll());
+            var trajets = await _trajetRepository.GetAll();
+
+            foreach (var trajet in trajets)
+            {
+                    trajet.Reservations = await _reservationRepository.GetAll(r => r.TrajetId == trajet.TrajetId);
+            }
+
+            return Ok(trajets);
         }
+
+
 
         [HttpGet("{trajetId}")]
         public async Task<IActionResult> Get(int trajetId)

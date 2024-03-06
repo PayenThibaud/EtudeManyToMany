@@ -27,14 +27,9 @@ namespace EtudeManyToMany.API.Controllers
 
             utilisateurs.ForEach(u =>
             {
-                if (u.Passager == null)
-                {
                     u.Passager = _passagerRepository.Get(p => p.UtilisateurId == u.UtilisateurId).Result;
-                }
-                if (u.Conducteur == null)
-                {
+                    
                     u.Conducteur = _conducteurRepository.Get(c => c.UtilisateurId == u.UtilisateurId).Result;
-                }
             });
 
             return Ok(utilisateurs);
@@ -49,15 +44,10 @@ namespace EtudeManyToMany.API.Controllers
 
             if (utilisateur != null)
             {
-                if (utilisateur.Passager == null)
-                {
-                    utilisateur.Passager = await _passagerRepository.Get(p => p.UtilisateurId == utilisateur.UtilisateurId);
-                }
 
-                if (utilisateur.Conducteur == null)
-                {
+                    utilisateur.Passager = await _passagerRepository.Get(p => p.UtilisateurId == utilisateur.UtilisateurId);
+
                     utilisateur.Conducteur = await _conducteurRepository.Get(c => c.UtilisateurId == utilisateur.UtilisateurId);
-                }
 
                 return Ok(utilisateur);
             }
@@ -123,7 +113,7 @@ namespace EtudeManyToMany.API.Controllers
         public async Task<IActionResult> RetraitConducteur(int utilisateurId, int conducteurId)
         {
             if (await _utilisateurRepository.GetById(utilisateurId) == null)
-                return BadRequest("Utilisaer introuvable");
+                return BadRequest("Utilisateur introuvable");
 
             var ing = await _conducteurRepository.GetById(conducteurId);
 
