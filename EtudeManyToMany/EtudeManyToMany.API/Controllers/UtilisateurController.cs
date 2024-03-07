@@ -109,7 +109,7 @@ namespace EtudeManyToMany.API.Controllers
 
 
 
-        [HttpDelete("Retrait-du-Conducteur/{utilisateurId}")]
+        [HttpDelete("Retrait-du-Conducteur/{utilisateurId}/{conducteurId}")]
         public async Task<IActionResult> RetraitConducteur(int utilisateurId, int conducteurId)
         {
             if (await _utilisateurRepository.GetById(utilisateurId) == null)
@@ -131,7 +131,7 @@ namespace EtudeManyToMany.API.Controllers
 
 
 
-        [HttpDelete("Retrait-du-Passager/{utilisateurId}")]
+        [HttpDelete("Retrait-du-Passager/{utilisateurId}/{passagerId}")]
         public async Task<IActionResult> RetraitPassager(int utilisateurId, int passagerId)
         {
             if (await _utilisateurRepository.GetById(utilisateurId) == null)
