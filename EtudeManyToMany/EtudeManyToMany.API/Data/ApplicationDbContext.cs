@@ -15,7 +15,6 @@ namespace EtudeManyToMany.API.Data
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Conducteur> Conducteurs { get; set; }
         public DbSet<Passager> Passagers { get; set; }
-        public DbSet<Administrateur> Admins { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,7 +23,6 @@ namespace EtudeManyToMany.API.Data
             modelBuilder.Entity<Reservation>().HasData(InitialModel.Reservations);
             modelBuilder.Entity<Passager>().HasData(InitialModel.Passagers);
             modelBuilder.Entity<Conducteur>().HasData(InitialModel.Conducteurs);
-            modelBuilder.Entity<Administrateur>().HasData(InitialModel.Admins);
 
             modelBuilder.Entity<Utilisateur>()
                 .HasOne(u => u.Conducteur)

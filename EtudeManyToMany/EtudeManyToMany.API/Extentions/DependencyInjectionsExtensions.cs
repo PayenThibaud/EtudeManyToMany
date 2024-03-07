@@ -9,6 +9,8 @@ using Microsoft.IdentityModel.Tokens;
 using EtudeManyToMany.API.Data;
 using EtudeManyToMany.Core.Model;
 using EtudeManyToMany.API.Repository;
+using EtudeManyToMany.API.Helpers;
+using Constants = EtudeManyToMany.API.Helpers.Constants;
 
 namespace EcoRideAPI.Extensions
 {
@@ -24,6 +26,10 @@ namespace EcoRideAPI.Extensions
             builder.AddDatabase();
 
             builder.AddRepositories();
+
+            builder.AddAuthentication();
+
+            builder.AddAuthorization();
 
         }
 
@@ -76,5 +82,46 @@ namespace EcoRideAPI.Extensions
             builder.Services.AddScoped<IRepository<Reservation>, ReservationRepository>();
         }
 
+        private static void AddAuthentication(this WebApplicationBuilder builder)
+        {
+            var appSettingsSection = builder.Configuration.GetSection(nameof(AppSettings));
+            builder.Services.Configure<AppSettings>(appSettingsSection); // service IOptions<Appsettings>
+            AppSettings appSettings = appSettingsSection.Get<AppSettings>();
+
+            var key = Encoding.ASCII.GetBytes(appSettings.SecretKey!);
+
+            builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(options =>
+                {
+                    options.SaveToken = true;
+                    options.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ValidateIssuerSigningKey = true, // utilisation d'une clé cryptée pour la sécurité du token
+                        IssuerSigningKey = new SymmetricSecurityKey(key), // clé cryptée en elle même
+                        ValidateLifetime = true, // vérification du temps d'expiration du Token
+                        ValidateAudience = true, // vérification de l'audience du token
+                        ValidAudience = appSettings.ValidAudience, // l'audience
+                        ValidateIssuer = true, // vérification du donneur du token
+                        ValidIssuer = appSettings.ValidIssuer, // le donneur
+                        ClockSkew = TimeSpan.Zero // décallage possible de l'expiration du token
+                    };
+                });
+        }
+
+        private static void AddAuthorization(this WebApplicationBuilder builder)
+        {
+            builder.Services.AddAuthorization(options =>
+            {
+
+                options.AddPolicy(Constants.PolicyAdmin, police =>
+                {
+                    police.RequireClaim(ClaimTypes.Role, Constants.RoleAdmin);
+                });
+                options.AddPolicy(Constants.PolicyUser, police =>
+                {
+                    police.RequireClaim(ClaimTypes.Role, Constants.RoleUser);
+                });
+            });
+        }
     }
 }

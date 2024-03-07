@@ -12,21 +12,36 @@ namespace EtudeManyToMany.Core.Data
                 UtilisateurId = 1,
                 Nom = "Dupont",
                 Email = "jean.dupont@gmail.com",
-                Phone = "0607080910"
+                Phone = "0607080910",
+                Password = "1",
+                isAdmin = false
             },
             new Utilisateur
             {
                 UtilisateurId = 2,
                 Nom = "Dujardin",
                 Email = "pierre.dujardin@gmail.com",
-                Phone = "0607880910"
+                Phone = "0607880910",
+                Password = "2",
+                isAdmin = false
             },
             new Utilisateur
             {
                 UtilisateurId = 3,
                 Nom = "Doe",
                 Email = "john.doe@gmail.com",
-                Phone = "0609090910"
+                Phone = "0609090910",
+                Password = "3",
+                isAdmin = false
+            },
+            new Utilisateur
+            {
+                UtilisateurId = 4,
+                Nom = "Admin",
+                Email = "Admin@gmail.com",
+                Phone = "0609090910",
+                Password = "Admin",
+                isAdmin = true
             }
         };
 
@@ -82,16 +97,6 @@ namespace EtudeManyToMany.Core.Data
                 ReservationId = 2,
                 TrajetId = 1,
                 PassagerId = 2
-            }
-        };
-
-        public static readonly List<Administrateur> Admins = new List<Administrateur>()
-        {
-            new Administrateur
-            {
-                AdministrateurId = 1,
-                Nom = "Admin",
-                Password = "PAss62!",
             }
         };
     }

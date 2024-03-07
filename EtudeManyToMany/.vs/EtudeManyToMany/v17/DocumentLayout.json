@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\controllers\\trajetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\controllers\\trajetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\controllers\\authentificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\controllers\\authentificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\controllers\\conducteurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\helpers\\passwordcrypter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\helpers\\passwordcrypter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\query\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
@@ -34,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,63 +46,30 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TrajetController.cs",
-              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\TrajetController.cs",
-              "RelativeDocumentMoniker": "EtudeManyToMany.API\\Controllers\\TrajetController.cs",
-              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\TrajetController.cs",
-              "RelativeToolTip": "EtudeManyToMany.API\\Controllers\\TrajetController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowCsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T10:26:32.307Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ConducteurController.cs",
               "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\ConducteurController.cs",
               "RelativeDocumentMoniker": "EtudeManyToMany.API\\Controllers\\ConducteurController.cs",
-              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\ConducteurController.cs*",
-              "RelativeToolTip": "EtudeManyToMany.API\\Controllers\\ConducteurController.cs*",
-              "ViewState": "AQIAAEoAAAAAAAAAAAAIwA0AAABJAAAA",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\ConducteurController.cs",
+              "RelativeToolTip": "EtudeManyToMany.API\\Controllers\\ConducteurController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T10:19:49.32Z",
+              "WhenOpened": "2024-03-07T13:28:18.678Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "SQLQuery1.sql ",
-              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Query\\SQLQuery1.sql",
-              "RelativeDocumentMoniker": "EtudeManyToMany.API\\Query\\SQLQuery1.sql",
-              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Query\\SQLQuery1.sql",
-              "RelativeToolTip": "EtudeManyToMany.API\\Query\\SQLQuery1.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-03-06T15:23:16.558Z",
+              "Title": "PasswordCrypter.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Helpers\\PasswordCrypter.cs",
+              "RelativeDocumentMoniker": "EtudeManyToMany.API\\Helpers\\PasswordCrypter.cs",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Helpers\\PasswordCrypter.cs",
+              "RelativeToolTip": "EtudeManyToMany.API\\Helpers\\PasswordCrypter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T13:04:44.274Z",
               "EditorCaption": ""
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "Orientation": 0,
-      "VerticalTabListWidth": 256,
-      "FloatingWindowState": {
-        "Id": "5471de00-0962-4943-bdcd-389ac80ebcb1",
-        "Display": 1,
-        "X": 304,
-        "Y": 0,
-        "Width": 1336,
-        "Height": 1940,
-        "WindowState": 2
-      },
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
+            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
@@ -107,9 +78,34 @@
               "RelativeDocumentMoniker": "EtudeManyToMany.API\\Controllers\\UtilisateurController.cs",
               "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\UtilisateurController.cs",
               "RelativeToolTip": "EtudeManyToMany.API\\Controllers\\UtilisateurController.cs",
-              "ViewState": "AQIAAIYAAAAAAAAAAAAuwAAAAAAAAAAA",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAQwBkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-07T10:20:05.104Z",
+              "WhenOpened": "2024-03-07T13:03:46.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthentificationController.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\AuthentificationController.cs",
+              "RelativeDocumentMoniker": "EtudeManyToMany.API\\Controllers\\AuthentificationController.cs",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\AuthentificationController.cs",
+              "RelativeToolTip": "EtudeManyToMany.API\\Controllers\\AuthentificationController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAgwBQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-07T11:20:15.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Query\\SQLQuery1.sql",
+              "RelativeDocumentMoniker": "EtudeManyToMany.API\\Query\\SQLQuery1.sql",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Query\\SQLQuery1.sql",
+              "RelativeToolTip": "EtudeManyToMany.API\\Query\\SQLQuery1.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-03-06T15:23:16.558Z",
               "EditorCaption": ""
             }
           ]

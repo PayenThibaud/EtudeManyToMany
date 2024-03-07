@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EtudeManyToMany.API.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240302151754_initMigration")]
+    [Migration("20240307111816_initMigration")]
     partial class initMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -22,35 +22,6 @@ namespace EtudeManyToMany.API.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
-
-            modelBuilder.Entity("EtudeManyToMany.Core.Model.Administrateur", b =>
-                {
-                    b.Property<int>("AdministrateurId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("AdministrateurId"), 1L, 1);
-
-                    b.Property<string>("Nom")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("AdministrateurId");
-
-                    b.ToTable("Admins");
-
-                    b.HasData(
-                        new
-                        {
-                            AdministrateurId = 1,
-                            Nom = "Admin",
-                            Password = "PAss62!"
-                        });
-                });
 
             modelBuilder.Entity("EtudeManyToMany.Core.Model.Conducteur", b =>
                 {
@@ -202,9 +173,16 @@ namespace EtudeManyToMany.API.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("isAdmin")
+                        .HasColumnType("bit");
 
                     b.HasKey("UtilisateurId");
 
@@ -216,21 +194,36 @@ namespace EtudeManyToMany.API.Migrations
                             UtilisateurId = 1,
                             Email = "jean.dupont@gmail.com",
                             Nom = "Dupont",
-                            Phone = "0607080910"
+                            Password = "1",
+                            Phone = "0607080910",
+                            isAdmin = false
                         },
                         new
                         {
                             UtilisateurId = 2,
                             Email = "pierre.dujardin@gmail.com",
                             Nom = "Dujardin",
-                            Phone = "0607880910"
+                            Password = "2",
+                            Phone = "0607880910",
+                            isAdmin = false
                         },
                         new
                         {
                             UtilisateurId = 3,
                             Email = "john.doe@gmail.com",
                             Nom = "Doe",
-                            Phone = "0609090910"
+                            Password = "3",
+                            Phone = "0609090910",
+                            isAdmin = false
+                        },
+                        new
+                        {
+                            UtilisateurId = 4,
+                            Email = "Admin@gmail.com",
+                            Nom = "Admin",
+                            Password = "Admin",
+                            Phone = "0609090910",
+                            isAdmin = true
                         });
                 });
 

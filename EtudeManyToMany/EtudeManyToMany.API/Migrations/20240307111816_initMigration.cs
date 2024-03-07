@@ -9,20 +9,6 @@ namespace EtudeManyToMany.API.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Admins",
-                columns: table => new
-                {
-                    AdministrateurId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Nom = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Admins", x => x.AdministrateurId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Utilisateurs",
                 columns: table => new
                 {
@@ -30,7 +16,9 @@ namespace EtudeManyToMany.API.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Nom = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    isAdmin = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -122,18 +110,14 @@ namespace EtudeManyToMany.API.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "Admins",
-                columns: new[] { "AdministrateurId", "Nom", "Password" },
-                values: new object[] { 1, "Admin", "PAss62!" });
-
-            migrationBuilder.InsertData(
                 table: "Utilisateurs",
-                columns: new[] { "UtilisateurId", "Email", "Nom", "Phone" },
+                columns: new[] { "UtilisateurId", "Email", "Nom", "Password", "Phone", "isAdmin" },
                 values: new object[,]
                 {
-                    { 1, "jean.dupont@gmail.com", "Dupont", "0607080910" },
-                    { 2, "pierre.dujardin@gmail.com", "Dujardin", "0607880910" },
-                    { 3, "john.doe@gmail.com", "Doe", "0609090910" }
+                    { 1, "jean.dupont@gmail.com", "Dupont", "1", "0607080910", false },
+                    { 2, "pierre.dujardin@gmail.com", "Dujardin", "2", "0607880910", false },
+                    { 3, "john.doe@gmail.com", "Doe", "3", "0609090910", false },
+                    { 4, "Admin@gmail.com", "Admin", "Admin", "0609090910", true }
                 });
 
             migrationBuilder.InsertData(
@@ -199,9 +183,6 @@ namespace EtudeManyToMany.API.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "Admins");
-
             migrationBuilder.DropTable(
                 name: "Reservations");
 
