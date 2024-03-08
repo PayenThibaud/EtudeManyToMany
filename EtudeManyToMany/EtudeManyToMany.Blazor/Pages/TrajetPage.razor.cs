@@ -9,6 +9,9 @@ namespace EtudeManyToMany.Blazor.Pages
     {
         private Trajet? Trajet { get; set; }
 
+        [Parameter]
+        public int ConducteurId { get; set; }
+
         [Inject]
         private IService<Trajet> TrajetService { get; set; }
 
@@ -21,16 +24,17 @@ namespace EtudeManyToMany.Blazor.Pages
         {
             if (Trajet != null)
             {
+                if (ConducteurId == 0)
+                {
+                    return;
+                }
+
+                Trajet.ConducteurId = ConducteurId;
+
                 bool success = await TrajetService.Add(Trajet);
                 if (success)
                 {
-                    // Trajet ajouté avec succès, réinitialiser le formulaire
                     Trajet = null;
-                }
-                else
-                {
-                    // Gérer les erreurs de sauvegarde du trajet
-                    // Peut-être afficher un message d'erreur à l'utilisateur
                 }
             }
         }

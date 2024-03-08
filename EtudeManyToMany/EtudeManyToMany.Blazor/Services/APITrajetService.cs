@@ -18,7 +18,7 @@ namespace EtudeManyToMany.Blazor.Services
         }
         public async Task<bool> Add(Trajet trajet)
         {
-            var result = await _httpClient.PostAsJsonAsync(_baseApiRoute, trajet);
+            var result = await _httpClient.PostAsJsonAsync(_baseApiRoute + $"/{trajet.ConducteurId}", trajet);
             return result.IsSuccessStatusCode;
         }
 
