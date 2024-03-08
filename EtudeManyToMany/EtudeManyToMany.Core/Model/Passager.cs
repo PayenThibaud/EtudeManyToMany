@@ -16,5 +16,8 @@ namespace EtudeManyToMany.Core.Model
 
         // Liste de réservations par le passagé (relation Many To Many)
         public List<Reservation>? Reservations { get; set; }
+
+        // Liste des commentaires par le passager (relation Many To Many)
+        public List<Commentaire>? Commentaires { get; set; }
     }
 }

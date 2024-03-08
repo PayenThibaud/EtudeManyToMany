@@ -73,7 +73,9 @@ namespace EtudeManyToMany.API.Controllers
             return Ok("Trajet ajouté avec succès et associé au Conducteur");
         }
 
-        [HttpDelete("Retrait-du-Trajet/{conducteurId}")]
+
+
+        [HttpDelete("Retrait-du-Trajet/{conducteurId}/{trajetId}")]
         public async Task<IActionResult> RetraitConducteur(int conducteurId, int trajetId)
         {
             if (await _conducteurRepository.GetById(conducteurId) == null)

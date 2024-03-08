@@ -1,6 +1,8 @@
-﻿using EtudeManyToMany.API.Repository;
+﻿using EtudeManyToMany.API.Helpers;
+using EtudeManyToMany.API.Repository;
 using EtudeManyToMany.Core.Model;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using System.Runtime.InteropServices;
 
 namespace EtudeManyToMany.API.Controllers
@@ -12,12 +14,15 @@ namespace EtudeManyToMany.API.Controllers
         private readonly IRepository<Utilisateur> _utilisateurRepository;
         private readonly IRepository<Passager> _passagerRepository;
         private readonly IRepository<Conducteur> _conducteurRepository;
+        private readonly AppSettings _appSettings;
 
-        public UtilisateurController(IRepository<Utilisateur> utilisateurRepository, IRepository<Passager> passagerRepository, IRepository<Conducteur> conducteurRepository)
+
+        public UtilisateurController(IRepository<Utilisateur> utilisateurRepository, IRepository<Passager> passagerRepository, IRepository<Conducteur> conducteurRepository, IOptions<AppSettings> appSettings)
         {
             _utilisateurRepository = utilisateurRepository;
             _passagerRepository = passagerRepository;
             _conducteurRepository = conducteurRepository;
+            _appSettings = appSettings.Value;
         }
 
         [HttpGet]
@@ -59,7 +64,16 @@ namespace EtudeManyToMany.API.Controllers
         [HttpPost]
         public async Task<IActionResult> AjoutUtilisateur([FromBody] Utilisateur utilisateur)
         {
+            var dejaUtilisateur = await _utilisateurRepository.Get(u => u.Email == utilisateur.Email);
+            if (dejaUtilisateur != null)
+            {
+                return BadRequest("Un utilisateur avec cet e-mail existe déjà.");
+            }
+
+            utilisateur.Password = PasswordCrypter.EncryptPassword(utilisateur.Password, _appSettings.SecretKey);
+
             var utilisateurId = await _utilisateurRepository.Add(utilisateur);
+
 
             if (utilisateurId > 0)
                 return CreatedAtAction(nameof(ToutLesUtilisateurs), "Utilisateur ajouter");
@@ -109,7 +123,7 @@ namespace EtudeManyToMany.API.Controllers
 
 
 
-        [HttpDelete("Retrait-du-Conducteur/{utilisateurId}")]
+        [HttpDelete("Retrait-du-Conducteur/{utilisateurId}/{conducteurId}")]
         public async Task<IActionResult> RetraitConducteur(int utilisateurId, int conducteurId)
         {
             if (await _utilisateurRepository.GetById(utilisateurId) == null)
@@ -131,7 +145,7 @@ namespace EtudeManyToMany.API.Controllers
 
 
 
-        [HttpDelete("Retrait-du-Passager/{utilisateurId}")]
+        [HttpDelete("Retrait-du-Passager/{utilisateurId}/{passagerId}")]
         public async Task<IActionResult> RetraitPassager(int utilisateurId, int passagerId)
         {
             if (await _utilisateurRepository.GetById(utilisateurId) == null)

@@ -517,6 +517,16 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "EtudeManyToMany.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/EtudeManyToMany.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EtudeManyToMany.Core.dll": {}
+        }
       }
     },
     "net6.0/browser-wasm": {
@@ -1028,6 +1038,16 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "EtudeManyToMany.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/EtudeManyToMany.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EtudeManyToMany.Core.dll": {}
         }
       }
     }
@@ -1906,10 +1926,16 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "EtudeManyToMany.Core/1.0.0": {
+      "type": "project",
+      "path": "../EtudeManyToMany.Core/EtudeManyToMany.Core.csproj",
+      "msbuildProject": "../EtudeManyToMany.Core/EtudeManyToMany.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "EtudeManyToMany.Core >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.26",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.26",
       "Microsoft.NET.ILLink.Analyzers >= 7.0.100-1.23211.1",
@@ -1949,7 +1975,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Core\\EtudeManyToMany.Core.csproj": {
+              "projectPath": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Core\\EtudeManyToMany.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

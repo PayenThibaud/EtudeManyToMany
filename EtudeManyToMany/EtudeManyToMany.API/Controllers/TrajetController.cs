@@ -42,6 +42,21 @@ namespace EtudeManyToMany.API.Controllers
         }
 
 
+        [HttpGet("{lieuDepart}/{lieuArrivee}")]
+        public async Task<IActionResult> Get(string lieuDepart, string lieuArrivee)
+        {
+            var trajets = await _trajetRepository.GetAll(t => t.LieuDepart == lieuDepart && t.LieuArrivee == lieuArrivee);
+
+            if (trajets == null || !trajets.Any())
+            {
+                return NotFound("Aucun trajet trouvé pour les lieux spécifiés.");
+            }
+
+            return Ok(trajets);
+        }
+
+
+
 
     }
 }

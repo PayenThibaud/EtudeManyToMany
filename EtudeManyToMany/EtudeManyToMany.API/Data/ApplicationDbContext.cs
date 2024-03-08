@@ -15,7 +15,7 @@ namespace EtudeManyToMany.API.Data
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Conducteur> Conducteurs { get; set; }
         public DbSet<Passager> Passagers { get; set; }
-        public DbSet<Administrateur> Admins { get; set; }
+        public DbSet<Commentaire> Commentaires { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -24,7 +24,6 @@ namespace EtudeManyToMany.API.Data
             modelBuilder.Entity<Reservation>().HasData(InitialModel.Reservations);
             modelBuilder.Entity<Passager>().HasData(InitialModel.Passagers);
             modelBuilder.Entity<Conducteur>().HasData(InitialModel.Conducteurs);
-            modelBuilder.Entity<Administrateur>().HasData(InitialModel.Admins);
 
             modelBuilder.Entity<Utilisateur>()
                 .HasOne(u => u.Conducteur)
@@ -56,6 +55,18 @@ namespace EtudeManyToMany.API.Data
                 .WithMany(t => t.Reservations)
                 .HasForeignKey(r => r.TrajetId)
                 .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Commentaire>()
+              .HasOne(c => c.Passager)
+              .WithMany(u => u.Commentaires)
+              .HasForeignKey(c => c.PassagerId)
+              .OnDelete(DeleteBehavior.NoAction);
+
+            modelBuilder.Entity<Commentaire>()
+              .HasOne(c => c.Conducteur)
+              .WithMany(u => u.Commentaires)
+              .HasForeignKey(c => c.ConducteurId)
+              .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

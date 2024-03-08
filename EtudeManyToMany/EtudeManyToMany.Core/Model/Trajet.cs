@@ -11,6 +11,9 @@ namespace EtudeManyToMany.Core.Model
         public int TrajetId {  get; set; }
         public string LieuDepart { get; set;}
         public string LieuArrivee { get; set;}
+        public DateTime dateTime { get; set; }
+        public int NombrePlace { get; set; }
+        public float Prix { get; set; }
 
 
         // Foreign key pour référencer le conducteur du trajet (relatation One To Many)
