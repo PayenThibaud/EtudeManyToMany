@@ -11,4 +11,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.26" PrivateAssets="all" />
   </ItemGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\EtudeManyToMany.Core\EtudeManyToMany.Core.csproj" />
+	</ItemGroup>
+
+	
 </Project>
