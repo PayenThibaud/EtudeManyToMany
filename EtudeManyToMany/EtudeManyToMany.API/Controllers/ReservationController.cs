@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EtudeManyToMany.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("reservations")]
     [ApiController]
     public class ReservationController : ControllerBase
     {

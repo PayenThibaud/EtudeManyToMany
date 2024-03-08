@@ -162,6 +162,9 @@ namespace EtudeManyToMany.API.Migrations
                     b.Property<int>("ConducteurId")
                         .HasColumnType("int");
 
+                    b.Property<DateTime>("DateTime")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("LieuArrivee")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -176,9 +179,6 @@ namespace EtudeManyToMany.API.Migrations
                     b.Property<float>("Prix")
                         .HasColumnType("real");
 
-                    b.Property<DateTime>("dateTime")
-                        .HasColumnType("datetime2");
-
                     b.HasKey("TrajetId");
 
                     b.HasIndex("ConducteurId");
@@ -190,11 +190,11 @@ namespace EtudeManyToMany.API.Migrations
                         {
                             TrajetId = 1,
                             ConducteurId = 2,
+                            DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             LieuArrivee = "Marseille",
                             LieuDepart = "Paris",
                             NombrePlace = 0,
-                            Prix = 0f,
-                            dateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                            Prix = 0f
                         });
                 });
 

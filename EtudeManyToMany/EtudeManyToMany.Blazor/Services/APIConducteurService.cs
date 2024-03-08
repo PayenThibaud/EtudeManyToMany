@@ -8,12 +8,12 @@ namespace EtudeManyToMany.Blazor.Services
     public class APIConducteurService : IService<Conducteur>
     {
         private readonly HttpClient _httpClient;
-        private readonly string _baseApiRoute; // = "http://localhost:7044/api/conducteurs";
+        private readonly string _baseApiRoute; // = "http://localhost:7044/conducteurs";
 
         public APIConducteurService(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
-            _baseApiRoute = configuration["ConducteurAPIUrlHttps"] + "/api/conducteurs";
+            _baseApiRoute = configuration["ManyAPIUrlHttps"] + "/conducteurs";
         }
         public async Task<bool> Add(Conducteur conducteur)
         {

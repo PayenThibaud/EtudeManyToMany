@@ -26,16 +26,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Thibaud Payen/Desktop/M2I formation/EtudeMany/EtudeManyToMany/EtudeManyToMany.Blazor/Pages/ConducteurRazor.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29uZHVjdGV1clJhem9yLnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Thibaud Payen/Desktop/M2I formation/EtudeMany/EtudeManyToMany/EtudeManyToMany.Blazor/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Thibaud Payen/Desktop/M2I formation/EtudeMany/EtudeManyToMany/EtudeManyToMany.Blazor/Pages/PassagerRazor.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGFzc2FnZXJSYXpvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Thibaud Payen/Desktop/M2I formation/EtudeMany/EtudeManyToMany/EtudeManyToMany.Blazor/Pages/TrajetPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVHJhamV0UGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Thibaud Payen/Desktop/M2I formation/EtudeMany/EtudeManyToMany/EtudeManyToMany.Blazor/_Imports.razor]

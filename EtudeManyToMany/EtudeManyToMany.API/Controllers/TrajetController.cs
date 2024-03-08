@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EtudeManyToMany.API.Controllers
 {
-    [Route("[controller]")]
+    [Route("trajets")]
     [ApiController]
     public class TrajetController : ControllerBase
     {

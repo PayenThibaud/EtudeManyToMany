@@ -11,7 +11,7 @@ namespace EtudeManyToMany.Core.Model
         public int TrajetId {  get; set; }
         public string LieuDepart { get; set;}
         public string LieuArrivee { get; set;}
-        public DateTime dateTime { get; set; }
+        public DateTime DateTime { get; set; }
         public int NombrePlace { get; set; }
         public float Prix { get; set; }
 
