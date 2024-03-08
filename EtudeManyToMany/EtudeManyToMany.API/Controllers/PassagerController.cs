@@ -13,13 +13,17 @@ namespace EtudeManyToMany.API.Controllers
         private readonly IRepository<Reservation> _reservationRepository;
         private readonly IRepository<Utilisateur> _utilisateurRepository;
         private readonly IRepository<Trajet> _trajetRepository;
+        private readonly IRepository<Commentaire> _commentaireRepository;
+        private readonly IRepository<Conducteur> _conducteurRepository;
 
-        public PassagerController(IRepository<Passager> passagerRepository, IRepository<Reservation> reservationRepository, IRepository<Utilisateur> utilisateurRepository, IRepository<Trajet> trajetRepository)
+        public PassagerController(IRepository<Passager> passagerRepository, IRepository<Reservation> reservationRepository, IRepository<Utilisateur> utilisateurRepository, IRepository<Trajet> trajetRepository, IRepository<Commentaire> commentaireRepository, IRepository<Conducteur> conducteurRepository)
         {
             _passagerRepository = passagerRepository;
             _reservationRepository = reservationRepository;
             _utilisateurRepository = utilisateurRepository;
             _trajetRepository = trajetRepository;
+            _commentaireRepository = commentaireRepository;
+            _conducteurRepository = conducteurRepository;
         }
 
         [HttpGet]
@@ -98,6 +102,29 @@ namespace EtudeManyToMany.API.Controllers
                 return Ok("Reservation retirer");
 
             return BadRequest("Oh oh ... des problèmes");
+        }
+
+        [HttpPost("Ajout-Commentaire/{passagerId}/{conducteurId}")]
+        public async Task<IActionResult> AjoutReservation(int passagerId, int conducteurId, [FromBody] Commentaire commentaire)
+        {
+            var passager = await _passagerRepository.GetById(passagerId);
+            if (passager == null)
+                return BadRequest("Passager introuvable");
+
+            var conducteur = await _conducteurRepository.GetById(conducteurId);
+            if (conducteur == null)
+                return BadRequest("Conducteur introuvable");
+
+            var dejaCommentaire = await _commentaireRepository.Get(r => r.PassagerId == passagerId && r.ConducteurId == conducteurId);
+            if (dejaCommentaire != null)
+                return BadRequest("Le passager a déjà fait un commentaire pour ce conducteur");
+
+            commentaire.PassagerId = passagerId;
+            commentaire.ConducteurId = conducteurId;
+
+            await _commentaireRepository.Add(commentaire);
+
+            return Ok("Le passager à fait son commentaire !");
         }
     }
 }

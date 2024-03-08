@@ -80,6 +80,7 @@ namespace EcoRideAPI.Extensions
             builder.Services.AddScoped<IRepository<Passager>, PassagerRepository>();
             builder.Services.AddScoped<IRepository<Trajet>, TrajetRepository>();
             builder.Services.AddScoped<IRepository<Reservation>, ReservationRepository>();
+            builder.Services.AddScoped<IRepository<Commentaire>, CommentaireRepository>();
         }
 
         private static void AddAuthentication(this WebApplicationBuilder builder)

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
@@ -18,6 +19,9 @@ namespace EtudeManyToMany.API.Migrations
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Photo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    NomVehicule = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     isAdmin = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
@@ -71,6 +75,9 @@ namespace EtudeManyToMany.API.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     LieuDepart = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LieuArrivee = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    dateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    NombrePlace = table.Column<int>(type: "int", nullable: false),
+                    Prix = table.Column<float>(type: "real", nullable: false),
                     ConducteurId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -82,6 +89,32 @@ namespace EtudeManyToMany.API.Migrations
                         principalTable: "Conducteurs",
                         principalColumn: "ConducteurId",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Commentaires",
+                columns: table => new
+                {
+                    CommentaireId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Note = table.Column<int>(type: "int", nullable: false),
+                    Avis = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    PassagerId = table.Column<int>(type: "int", nullable: false),
+                    ConducteurId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Commentaires", x => x.CommentaireId);
+                    table.ForeignKey(
+                        name: "FK_Commentaires_Conducteurs_ConducteurId",
+                        column: x => x.ConducteurId,
+                        principalTable: "Conducteurs",
+                        principalColumn: "ConducteurId");
+                    table.ForeignKey(
+                        name: "FK_Commentaires_Passagers_PassagerId",
+                        column: x => x.PassagerId,
+                        principalTable: "Passagers",
+                        principalColumn: "PassagerId");
                 });
 
             migrationBuilder.CreateTable(
@@ -111,13 +144,13 @@ namespace EtudeManyToMany.API.Migrations
 
             migrationBuilder.InsertData(
                 table: "Utilisateurs",
-                columns: new[] { "UtilisateurId", "Email", "Nom", "Password", "Phone", "isAdmin" },
+                columns: new[] { "UtilisateurId", "Description", "Email", "Nom", "NomVehicule", "Password", "Phone", "Photo", "isAdmin" },
                 values: new object[,]
                 {
-                    { 1, "jean.dupont@gmail.com", "Dupont", "1", "0607080910", false },
-                    { 2, "pierre.dujardin@gmail.com", "Dujardin", "2", "0607880910", false },
-                    { 3, "john.doe@gmail.com", "Doe", "3", "0609090910", false },
-                    { 4, "Admin@gmail.com", "Admin", "Admin", "0609090910", true }
+                    { 1, null, "jean.dupont@gmail.com", "Dupont", null, "1", "0607080910", null, false },
+                    { 2, null, "pierre.dujardin@gmail.com", "Dujardin", null, "2", "0607880910", null, false },
+                    { 3, null, "john.doe@gmail.com", "Doe", null, "3", "0609090910", null, false },
+                    { 4, null, "Admin@gmail.com", "Admin", null, "Admin", "0609090910", null, true }
                 });
 
             migrationBuilder.InsertData(
@@ -140,8 +173,8 @@ namespace EtudeManyToMany.API.Migrations
 
             migrationBuilder.InsertData(
                 table: "Trajets",
-                columns: new[] { "TrajetId", "ConducteurId", "LieuArrivee", "LieuDepart" },
-                values: new object[] { 1, 2, "Marseille", "Paris" });
+                columns: new[] { "TrajetId", "ConducteurId", "LieuArrivee", "LieuDepart", "NombrePlace", "Prix", "dateTime" },
+                values: new object[] { 1, 2, "Marseille", "Paris", 0, 0f, new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified) });
 
             migrationBuilder.InsertData(
                 table: "Reservations",
@@ -152,6 +185,16 @@ namespace EtudeManyToMany.API.Migrations
                 table: "Reservations",
                 columns: new[] { "ReservationId", "PassagerId", "TrajetId" },
                 values: new object[] { 2, 2, 1 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Commentaires_ConducteurId",
+                table: "Commentaires",
+                column: "ConducteurId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Commentaires_PassagerId",
+                table: "Commentaires",
+                column: "PassagerId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Conducteurs_UtilisateurId",
@@ -183,6 +226,9 @@ namespace EtudeManyToMany.API.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Commentaires");
+
             migrationBuilder.DropTable(
                 name: "Reservations");
 
