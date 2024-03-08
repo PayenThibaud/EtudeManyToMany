@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EtudeManyToMany.Blazor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c0bf6e149fcdff8a79978c0ff8d29e04744bb95")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dfadaaa35ae4d440e763530712852148c7ca286c")]
 [assembly: System.Reflection.AssemblyProductAttribute("EtudeManyToMany.Blazor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EtudeManyToMany.Blazor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
