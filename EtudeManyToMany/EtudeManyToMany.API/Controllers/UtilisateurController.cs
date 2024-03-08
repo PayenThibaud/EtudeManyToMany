@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 
 namespace EtudeManyToMany.API.Controllers
 {
-    [Route("[controller]")]
+    [Route("utilisateurs")]
     [ApiController] // Ajoutez cet attribut
     public class UtilisateurController : ControllerBase
     {

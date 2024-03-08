@@ -12,7 +12,7 @@ using System.Text;
 
 namespace EtudeManyToMany.API.Controllers
 {
-    [Route("[controller]")]
+    [Route("authentifications")]
     [ApiController]
     public class AuthentificationController : ControllerBase
     {

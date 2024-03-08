@@ -3,44 +3,60 @@
   "WorkspaceRootPath": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.blazor\\services\\apiutilisateurservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|solutionrelative:etudemanytomany.blazor\\services\\apiutilisateurservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.blazor\\pages\\trajetpage.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|solutionrelative:etudemanytomany.blazor\\pages\\trajetpage.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.blazor\\pages\\trajetpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|solutionrelative:etudemanytomany.blazor\\pages\\trajetpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.blazor\\pages\\utilisateurpage.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|solutionrelative:etudemanytomany.blazor\\pages\\utilisateurpage.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\query\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
-      "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\query\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+      "AbsoluteMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.blazor\\pages\\utilisateurpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|solutionrelative:etudemanytomany.blazor\\pages\\utilisateurpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E91B9E5D-7D14-4A5E-964A-6010E2B813AD}|EtudeManyToMany.Core\\EtudeManyToMany.Core.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.core\\model\\trajet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E91B9E5D-7D14-4A5E-964A-6010E2B813AD}|EtudeManyToMany.Core\\EtudeManyToMany.Core.csproj|solutionrelative:etudemanytomany.core\\model\\trajet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\controllers\\authentificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\controllers\\authentificationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E91B9E5D-7D14-4A5E-964A-6010E2B813AD}|EtudeManyToMany.Core\\EtudeManyToMany.Core.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.core\\etudemanytomany.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{E91B9E5D-7D14-4A5E-964A-6010E2B813AD}|EtudeManyToMany.Core\\EtudeManyToMany.Core.csproj|solutionrelative:etudemanytomany.core\\etudemanytomany.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\controllers\\utilisateurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.blazor\\services\\apitrajetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|solutionrelative:etudemanytomany.blazor\\services\\apitrajetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\controllers\\trajetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\controllers\\trajetcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.blazor\\wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|solutionrelative:etudemanytomany.blazor\\wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\controllers\\commentairecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\controllers\\commentairecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\controllers\\conducteurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\controllers\\conducteurcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\query\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame",
-      "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\query\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|CodeFrame"
+      "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\controllers\\passagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\controllers\\passagercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\query\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame",
-      "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\query\\sqlquery1.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|ResultFrame"
+      "AbsoluteMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.api\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A8BA95B8-2660-4DBD-AD92-B0650FFDEF0D}|EtudeManyToMany.API\\EtudeManyToMany.API.csproj|solutionrelative:etudemanytomany.api\\controllers\\reservationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.blazor\\services\\apitrajetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|solutionrelative:etudemanytomany.blazor\\services\\apitrajetservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.blazor\\pages\\trajetpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|solutionrelative:etudemanytomany.blazor\\pages\\trajetpage.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|c:\\users\\thibaud payen\\desktop\\m2i formation\\etudemany\\etudemanytomany\\etudemanytomany.blazor\\wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0DE34F0C-DB81-415E-B05F-CA63CE873F11}|EtudeManyToMany.Blazor\\EtudeManyToMany.Blazor.csproj|solutionrelative:etudemanytomany.blazor\\wwwroot\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,105 +74,205 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SQLQuery1.sql ",
-              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Query\\SQLQuery1.sql",
-              "RelativeDocumentMoniker": "EtudeManyToMany.API\\Query\\SQLQuery1.sql",
-              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Query\\SQLQuery1.sql",
-              "RelativeToolTip": "EtudeManyToMany.API\\Query\\SQLQuery1.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2024-03-08T13:45:00.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Trajet.cs",
-              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Core\\Model\\Trajet.cs",
-              "RelativeDocumentMoniker": "EtudeManyToMany.Core\\Model\\Trajet.cs",
-              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Core\\Model\\Trajet.cs",
-              "RelativeToolTip": "EtudeManyToMany.Core\\Model\\Trajet.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T13:41:51.049Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "EtudeManyToMany.Core",
-              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Core\\EtudeManyToMany.Core.csproj",
-              "RelativeDocumentMoniker": "EtudeManyToMany.Core\\EtudeManyToMany.Core.csproj",
-              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Core\\EtudeManyToMany.Core.csproj",
-              "RelativeToolTip": "EtudeManyToMany.Core\\EtudeManyToMany.Core.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-08T13:41:47.741Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "APITrajetService.cs",
-              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Services\\APITrajetService.cs",
-              "RelativeDocumentMoniker": "EtudeManyToMany.Blazor\\Services\\APITrajetService.cs",
-              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Services\\APITrajetService.cs",
-              "RelativeToolTip": "EtudeManyToMany.Blazor\\Services\\APITrajetService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABEAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T13:21:03.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "TrajetPage.razor.cs",
               "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Pages\\TrajetPage.razor.cs",
               "RelativeDocumentMoniker": "EtudeManyToMany.Blazor\\Pages\\TrajetPage.razor.cs",
               "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Pages\\TrajetPage.razor.cs",
               "RelativeToolTip": "EtudeManyToMany.Blazor\\Pages\\TrajetPage.razor.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAsAAAA",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T13:20:55.711Z",
+              "WhenOpened": "2024-03-08T15:33:07.527Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\wwwroot\\appsettings.json",
-              "RelativeDocumentMoniker": "EtudeManyToMany.Blazor\\wwwroot\\appsettings.json",
-              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\wwwroot\\appsettings.json",
-              "RelativeToolTip": "EtudeManyToMany.Blazor\\wwwroot\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAsAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-08T13:17:24.44Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TrajetPage.razor",
-              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Pages\\TrajetPage.razor",
-              "RelativeDocumentMoniker": "EtudeManyToMany.Blazor\\Pages\\TrajetPage.razor",
-              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Pages\\TrajetPage.razor",
-              "RelativeToolTip": "EtudeManyToMany.Blazor\\Pages\\TrajetPage.razor",
-              "ViewState": "AQIAAC0AAAAAAAAAAAAowD0AAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-08T13:13:18.731Z",
+              "DocumentIndex": 4,
+              "Title": "AuthentificationController.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\AuthentificationController.cs",
+              "RelativeDocumentMoniker": "EtudeManyToMany.API\\Controllers\\AuthentificationController.cs",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\AuthentificationController.cs",
+              "RelativeToolTip": "EtudeManyToMany.API\\Controllers\\AuthentificationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:29:56.856Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "CommentaireController.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\CommentaireController.cs",
+              "RelativeDocumentMoniker": "EtudeManyToMany.API\\Controllers\\CommentaireController.cs",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\CommentaireController.cs",
+              "RelativeToolTip": "EtudeManyToMany.API\\Controllers\\CommentaireController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:29:55.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ConducteurController.cs",
               "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\ConducteurController.cs",
               "RelativeDocumentMoniker": "EtudeManyToMany.API\\Controllers\\ConducteurController.cs",
               "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\ConducteurController.cs",
               "RelativeToolTip": "EtudeManyToMany.API\\Controllers\\ConducteurController.cs",
-              "ViewState": "AQIAADUAAAAAAAAAAAAwwDoAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-08T13:11:46.546Z",
+              "WhenOpened": "2024-03-08T15:29:53.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PassagerController.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\PassagerController.cs",
+              "RelativeDocumentMoniker": "EtudeManyToMany.API\\Controllers\\PassagerController.cs",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\PassagerController.cs",
+              "RelativeToolTip": "EtudeManyToMany.API\\Controllers\\PassagerController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:29:52.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ReservationController.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\ReservationController.cs",
+              "RelativeDocumentMoniker": "EtudeManyToMany.API\\Controllers\\ReservationController.cs",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\ReservationController.cs",
+              "RelativeToolTip": "EtudeManyToMany.API\\Controllers\\ReservationController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:29:49.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TrajetController.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\TrajetController.cs",
+              "RelativeDocumentMoniker": "EtudeManyToMany.API\\Controllers\\TrajetController.cs",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\TrajetController.cs",
+              "RelativeToolTip": "EtudeManyToMany.API\\Controllers\\TrajetController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:29:47.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UtilisateurController.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\UtilisateurController.cs",
+              "RelativeDocumentMoniker": "EtudeManyToMany.API\\Controllers\\UtilisateurController.cs",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.API\\Controllers\\UtilisateurController.cs",
+              "RelativeToolTip": "EtudeManyToMany.API\\Controllers\\UtilisateurController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:29:43.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UtilisateurPage.razor.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Pages\\UtilisateurPage.razor.cs",
+              "RelativeDocumentMoniker": "EtudeManyToMany.Blazor\\Pages\\UtilisateurPage.razor.cs",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Pages\\UtilisateurPage.razor.cs",
+              "RelativeToolTip": "EtudeManyToMany.Blazor\\Pages\\UtilisateurPage.razor.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:27:55.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "APITrajetService.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Services\\APITrajetService.cs",
+              "RelativeDocumentMoniker": "EtudeManyToMany.Blazor\\Services\\APITrajetService.cs",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Services\\APITrajetService.cs",
+              "RelativeToolTip": "EtudeManyToMany.Blazor\\Services\\APITrajetService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:26:47.669Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "APIUtilisateurService.cs",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Services\\APIUtilisateurService.cs",
+              "RelativeDocumentMoniker": "EtudeManyToMany.Blazor\\Services\\APIUtilisateurService.cs",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Services\\APIUtilisateurService.cs",
+              "RelativeToolTip": "EtudeManyToMany.Blazor\\Services\\APIUtilisateurService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA4AAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T15:24:07.385Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\wwwroot\\appsettings.json",
+              "RelativeDocumentMoniker": "EtudeManyToMany.Blazor\\wwwroot\\appsettings.json",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\wwwroot\\appsettings.json",
+              "RelativeToolTip": "EtudeManyToMany.Blazor\\wwwroot\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-08T15:20:46.957Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UtilisateurPage.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Pages\\UtilisateurPage.razor",
+              "RelativeDocumentMoniker": "EtudeManyToMany.Blazor\\Pages\\UtilisateurPage.razor",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Pages\\UtilisateurPage.razor",
+              "RelativeToolTip": "EtudeManyToMany.Blazor\\Pages\\UtilisateurPage.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAABfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-08T15:11:51.119Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "0e9cd7f4-b8a0-4f9c-9ae6-177b69544756",
+        "Display": 1,
+        "X": 563,
+        "Y": 0,
+        "Width": 1336,
+        "Height": 1940,
+        "WindowState": 2
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TrajetPage.razor",
+              "DocumentMoniker": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Pages\\TrajetPage.razor",
+              "RelativeDocumentMoniker": "EtudeManyToMany.Blazor\\Pages\\TrajetPage.razor",
+              "ToolTip": "C:\\Users\\Thibaud Payen\\Desktop\\M2I formation\\EtudeMany\\EtudeManyToMany\\EtudeManyToMany.Blazor\\Pages\\TrajetPage.razor",
+              "RelativeToolTip": "EtudeManyToMany.Blazor\\Pages\\TrajetPage.razor",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAADQAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-03-08T15:21:48.93Z",
               "EditorCaption": ""
             }
           ]

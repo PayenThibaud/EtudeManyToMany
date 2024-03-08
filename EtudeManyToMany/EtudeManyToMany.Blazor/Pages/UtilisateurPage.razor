@@ -1,0 +1,53 @@
+﻿@page "/utilisateurs"
+@using EtudeManyToMany.Core.Model
+
+<div class="container-fluid">
+    <h3>Utilisateurs</h3>
+
+    <button class="btn btn-success" @onclick="AddUtilisateur"><i class="bi bi-plus-square"></i>&ensp; Ajouter un Utilisateur</button>
+
+    @if (Utilisateur != null)
+    {
+        <EditForm OnValidSubmit="SubmitUtilisateur" Model="Utilisateur">
+            <DataAnnotationsValidator />
+
+            <div class="form-row">
+                <div class="form-group" style="width:100%">
+                    <label for="nom">Nom:</label>
+                    <InputText class="form-control" id="nom" @bind-Value="Utilisateur.Nom" />
+                    <small><ValidationMessage For="() => Utilisateur.Nom" /></small>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group" style="width:100%">
+                    <label for="email">Email:</label>
+                    <InputText class="form-control" id="email" @bind-Value="Utilisateur.Email" />
+                    <small><ValidationMessage For="() => Utilisateur.Email" /></small>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group" style="width:100%">
+                    <label for="phone">Phone:</label>
+                    <InputText class="form-control" id="phone" @bind-Value="Utilisateur.Phone"  />
+                    <small><ValidationMessage For="() => Utilisateur.Phone" /></small>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group" style="width:100%">
+                    <label for="password">Password:</label>
+                    <InputText class="form-control" id="password" @bind-Value="Utilisateur.Password" />
+                    <small><ValidationMessage For="() => Utilisateur.Password" /></small>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <button type="submit" class="btn btn-primary">Validation</button>
+            </div>
+
+        </EditForm>
+    }
+</div>
+
