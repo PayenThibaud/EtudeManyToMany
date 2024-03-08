@@ -5,17 +5,19 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EtudeManyToMany.API.Controllers
 {
-    [Route("[controller]")]
+    [Route("trajets")]
     [ApiController]
     public class TrajetController : ControllerBase
     {
         private readonly IRepository<Trajet> _trajetRepository;
         private readonly IRepository<Reservation> _reservationRepository;
+        private readonly IRepository<Conducteur> _conducteurRepository;
 
-        public TrajetController(IRepository<Trajet> trajetRepository, IRepository<Reservation> reservationRepository)
+        public TrajetController(IRepository<Trajet> trajetRepository, IRepository<Reservation> reservationRepository, IRepository<Conducteur> conducteuRepository)
         {
             _trajetRepository = trajetRepository;
             _reservationRepository = reservationRepository;
+            _conducteurRepository = conducteuRepository;
         }
 
 
@@ -55,7 +57,22 @@ namespace EtudeManyToMany.API.Controllers
             return Ok(trajets);
         }
 
+        [HttpPost("{conducteurId}")]
+        public async Task<IActionResult> AjoutTrajet(int conducteurId, [FromBody] Trajet trajet)
+        {
+            var conducteur = await _conducteurRepository.GetById(conducteurId);
+            if (conducteur == null)
+                return BadRequest("Conducteur non trouvé");
 
+            if (conducteur.Trajets != null)
+                return BadRequest("Le conducteur a déjà un trajet");
+
+            trajet.ConducteurId = conducteurId;
+
+            await _trajetRepository.Add(trajet);
+
+            return Ok("Trajet ajouté avec succès et associé au Conducteur");
+        }
 
 
     }

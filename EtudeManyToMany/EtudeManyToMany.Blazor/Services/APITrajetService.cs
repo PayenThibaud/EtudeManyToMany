@@ -1,22 +1,24 @@
 ﻿using EtudeManyToMany.Core.Model;
 using System.Linq.Expressions;
 using System.Net.Http.Json;
+using Microsoft.Extensions.Configuration;
+
 
 namespace EtudeManyToMany.Blazor.Services
 {
     public class APITrajetService : IService<Trajet>
     {
         private readonly HttpClient _httpClient;
-        private readonly string _baseApiRoute; // = "http://localhost:7044/api/trajets";
+        private readonly string _baseApiRoute; // = "http://localhost:7044/trajets";
 
         public APITrajetService(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
-            _baseApiRoute = configuration["TrajetAPIUrlHttps"] + "/api/trajets";
+            _baseApiRoute = configuration["ManyAPIUrlHttps"] + "/trajets";
         }
         public async Task<bool> Add(Trajet trajet)
         {
-            var result = await _httpClient.PostAsJsonAsync(_baseApiRoute, trajet);
+            var result = await _httpClient.PostAsJsonAsync(_baseApiRoute + $"/{trajet.ConducteurId}", trajet);
             return result.IsSuccessStatusCode;
         }
 

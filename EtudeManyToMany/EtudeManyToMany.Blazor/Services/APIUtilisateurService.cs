@@ -7,12 +7,12 @@ namespace EtudeManyToMany.Blazor.Services
     public class APIUtilisateurService : IService<Utilisateur>
     {
         private readonly HttpClient _httpClient;
-        private readonly string _baseApiRoute; // = "http://localhost:7044/api/utilisateurs";
+        private readonly string _baseApiRoute; // = "http://localhost:7044/utilisateurs";
 
         public APIUtilisateurService(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
-            _baseApiRoute = configuration["UtilisateurAPIUrlHttps"] + "/api/utilisateurs";
+            _baseApiRoute = configuration["ManyAPIUrlHttps"] + "/utilisateurs";
         }
         public async Task<bool> Add(Utilisateur utilisateur)
         {

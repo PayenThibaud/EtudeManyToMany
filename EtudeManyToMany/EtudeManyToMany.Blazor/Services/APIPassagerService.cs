@@ -7,12 +7,12 @@ namespace EtudeManyToMany.Blazor.Services
     public class APIPassagerService : IService<Passager>
     {
         private readonly HttpClient _httpClient;
-        private readonly string _baseApiRoute; // = "http://localhost:7044/api/passagers";
+        private readonly string _baseApiRoute; // = "http://localhost:7044/passagers";
 
         public APIPassagerService(HttpClient httpClient, IConfiguration configuration)
         {
             _httpClient = httpClient;
-            _baseApiRoute = configuration["PassagerAPIUrlHttps"] + "/api/passagers";
+            _baseApiRoute = configuration["ManyAPIUrlHttps"] + "/passagers";
         }
 
         public async Task<bool> Add(Passager passager)

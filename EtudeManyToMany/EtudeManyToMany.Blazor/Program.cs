@@ -16,4 +16,6 @@ builder.Services.AddScoped<IService<Passager>, APIPassagerService>();
 builder.Services.AddScoped<IService<Trajet>, APITrajetService>();
 builder.Services.AddScoped<IService<Reservation>, APIReservationService>();
 
+
+
 await builder.Build().RunAsync();

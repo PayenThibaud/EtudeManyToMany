@@ -1,0 +1,58 @@
+﻿@page "/trajets/{ConducteurId:int}"
+
+<div class="container-fluid">
+    <h3>Trajets</h3>
+
+    <button class="btn btn-success" @onclick="AddTrajet"><i class="bi bi-plus-square"></i>&ensp; Ajouter un Trajet</button>
+
+    @if (Trajet != null)
+    {
+        <EditForm OnValidSubmit="SubmitTrajet" Model="Trajet">
+            <DataAnnotationsValidator />
+
+            <div class="form-row">
+                <div class="form-group" style="width:100%">
+                    <label for="lieuDepart">Lieu de départ:</label>
+                    <InputText class="form-control" id="lieuDepart" @bind-Value="Trajet.LieuDepart" />
+                    <small><ValidationMessage For="() => Trajet.LieuDepart" /></small>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group" style="width:100%">
+                    <label for="lieuArrivee">Lieu d'arrivée:</label>
+                    <InputText class="form-control" id="lieuArrivee" @bind-Value="Trajet.LieuArrivee" />
+                    <small><ValidationMessage For="() => Trajet.LieuArrivee" /></small>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group" style="width:100%">
+                    <label for="dateTime">Date:</label>
+                    <InputDate class="form-control" id="dateTime" @bind-Value="Trajet.DateTime" />
+                    <small><ValidationMessage For="() => Trajet.DateTime" /></small>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group" style="width:100%">
+                    <label for="nombrePlace">Nombre de places:</label>
+                    <InputNumber class="form-control" id="nombrePlace" @bind-Value="Trajet.NombrePlace" />
+                    <small><ValidationMessage For="() => Trajet.NombrePlace" /></small>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group" style="width:100%">
+                    <label for="prix">Prix:</label>
+                    <InputNumber class="form-control" id="prix" @bind-Value="Trajet.Prix" />
+                    <small><ValidationMessage For="() => Trajet.Prix" /></small>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <button type="submit" class="btn btn-primary">Validation</button>
+            </div>
+        </EditForm>
+    }
+</div>
