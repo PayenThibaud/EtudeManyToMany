@@ -55,42 +55,40 @@ namespace EtudeManyToMany.API.Controllers
         }
 
 
-
-        [HttpPost("ajout-du-Trajet/{conducteurId}")]
-        public async Task<IActionResult> AjoutTrajet(int conducteurId, [FromBody] Trajet trajet)
+        [HttpPost("{utilisateurId}")]
+        public async Task<IActionResult> AjoutConducteur(int utilisateurId, [FromBody] Conducteur conducteur)
         {
-            var conducteur = await _conducteurRepository.GetById(conducteurId);
-            if (conducteur == null)
-                return BadRequest("Conducteur non trouvé");
+            var utilisateur = await _utilisateurRepository.GetById(utilisateurId);
+            if (utilisateur == null)
+                return BadRequest("Utilisateur non trouvé");
 
-            if (conducteur.Trajets != null)
-                return BadRequest("Le conducteur a déjà un trajet");
+            var dejaConducteur = await _conducteurRepository.GetById(utilisateurId);
+            if (dejaConducteur != null)
+                return BadRequest("L'utilisateur à déjà un ConducteurId");
 
-            trajet.ConducteurId = conducteurId;
+            utilisateur.Conducteur = conducteur;
 
-            await _trajetRepository.Add(trajet);
+            await _utilisateurRepository.Update(utilisateur);
 
-            return Ok("Trajet ajouté avec succès et associé au Conducteur");
+            return Ok("Conducteur ajouté avec succès et associé à l'utilisateur");
         }
 
-
-
-        [HttpDelete("Retrait-du-Trajet/{conducteurId}/{trajetId}")]
-        public async Task<IActionResult> RetraitConducteur(int conducteurId, int trajetId)
+        [HttpDelete("Retrait-du-Conducteur/{utilisateurId}/{conducteurId}")]
+        public async Task<IActionResult> RetraitConducteur(int utilisateurId, int conducteurId)
         {
-            if (await _conducteurRepository.GetById(conducteurId) == null)
-                return BadRequest("Conducteur introuvable");
+            if (await _utilisateurRepository.GetById(utilisateurId) == null)
+                return BadRequest("Utilisateur introuvable");
 
-            var ing = await _trajetRepository.GetById(trajetId);
+            var ing = await _conducteurRepository.GetById(conducteurId);
 
             if (ing == null)
-                return BadRequest("Trajet introuvable");
+                return BadRequest("Conducteur introuvable");
 
-            if (ing.ConducteurId != conducteurId)
-                return BadRequest("Le Trajet est sur un autre conducteur");
+            if (ing.UtilisateurId != utilisateurId)
+                return BadRequest("Conducteur est sur un autre utilisateur");
 
-            if (await _trajetRepository.Delete(ing.TrajetId))
-                return Ok("Trajet retirer");
+            if (await _conducteurRepository.Delete(ing.ConducteurId))
+                return Ok("Conducteur retirer");
 
             return BadRequest("Oh oh ... des problèmes");
         }

@@ -60,71 +60,43 @@ namespace EtudeManyToMany.API.Controllers
             return Ok(passager);
         }
 
-        [HttpPost("Ajout-Reservation/{passagerId}/{trajetId}")]
-        public async Task<IActionResult> AjoutReservation(int passagerId, int trajetId, [FromBody] Reservation reservation)
+        [HttpPost("{utilisateurId}")]
+        public async Task<IActionResult> AjoutPassager(int utilisateurId, [FromBody] Passager passager)
         {
-            var passager = await _passagerRepository.GetById(passagerId);
-            if (passager == null)
-                return BadRequest("Passager introuvable");
+            var utilisateur = await _utilisateurRepository.GetById(utilisateurId);
+            if (utilisateur == null)
+                return BadRequest("Utilisateur non trouvé");
 
-            var trajet = await _trajetRepository.GetById(trajetId);
-            if (trajet == null)
-                return BadRequest("Trajet introuvable");
+            var dejaPassager = await _passagerRepository.GetById(utilisateurId);
+            if (dejaPassager != null)
+                return BadRequest("L'utilisateur à déjà un ConducteurId");
 
-            var dejaReservation = await _reservationRepository.Get(r => r.PassagerId == passagerId && r.TrajetId == trajetId);
-            if (dejaReservation != null)
-                return BadRequest("Le passager a déjà une réservation pour ce trajet");
+            utilisateur.Passager = passager;
 
-            reservation.PassagerId = passagerId;
-            reservation.TrajetId = trajetId;
+            await _utilisateurRepository.Update(utilisateur);
 
-            await _reservationRepository.Add(reservation);
-
-            return Ok("Le passager à fait sa reservation !");
+            return Ok("Passager ajouté avec succès et associé à l'utilisateur");
         }
 
 
-        [HttpDelete("Retrait-Reservation/{passagerId}/{reservationId}")]
-        public async Task<IActionResult> RetraitReservation(int passagerId, int reservationId)
+        [HttpDelete("Retrait-du-Passager/{utilisateurId}/{passagerId}")]
+        public async Task<IActionResult> RetraitPassager(int utilisateurId, int passagerId)
         {
-            if (await _passagerRepository.GetById(passagerId) == null)
-                return BadRequest("Passager introuvable");
+            if (await _utilisateurRepository.GetById(utilisateurId) == null)
+                return BadRequest("Utilisateur introuvable");
 
-            var ing = await _reservationRepository.GetById(reservationId);
+            var ing = await _passagerRepository.GetById(passagerId);
 
             if (ing == null)
-                return BadRequest("Reservation introuvable");
-
-            if (ing.PassagerId != passagerId)
-                return BadRequest("La reservation est sur un autre passager");
-
-            if (await _reservationRepository.Delete(ing.ReservationId))
-                return Ok("Reservation retirer");
-
-            return BadRequest("Oh oh ... des problèmes");
-        }
-
-        [HttpPost("Ajout-Commentaire/{passagerId}/{conducteurId}")]
-        public async Task<IActionResult> AjoutReservation(int passagerId, int conducteurId, [FromBody] Commentaire commentaire)
-        {
-            var passager = await _passagerRepository.GetById(passagerId);
-            if (passager == null)
                 return BadRequest("Passager introuvable");
 
-            var conducteur = await _conducteurRepository.GetById(conducteurId);
-            if (conducteur == null)
-                return BadRequest("Conducteur introuvable");
+            if (ing.UtilisateurId != utilisateurId)
+                return BadRequest("Passager est sur un autre utilisateur");
 
-            var dejaCommentaire = await _commentaireRepository.Get(r => r.PassagerId == passagerId && r.ConducteurId == conducteurId);
-            if (dejaCommentaire != null)
-                return BadRequest("Le passager a déjà fait un commentaire pour ce conducteur");
+            if (await _passagerRepository.Delete(ing.PassagerId))
+                return Ok("Passager retirer");
 
-            commentaire.PassagerId = passagerId;
-            commentaire.ConducteurId = conducteurId;
-
-            await _commentaireRepository.Add(commentaire);
-
-            return Ok("Le passager à fait son commentaire !");
+            return BadRequest("Oh oh ... des problèmes");
         }
     }
 }

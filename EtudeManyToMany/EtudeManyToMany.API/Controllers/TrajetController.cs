@@ -75,5 +75,26 @@ namespace EtudeManyToMany.API.Controllers
         }
 
 
+        [HttpDelete("Retrait-du-Trajet/{conducteurId}/{trajetId}")]
+        public async Task<IActionResult> RetraitConducteur(int conducteurId, int trajetId)
+        {
+            if (await _conducteurRepository.GetById(conducteurId) == null)
+                return BadRequest("Conducteur introuvable");
+
+            var ing = await _trajetRepository.GetById(trajetId);
+
+            if (ing == null)
+                return BadRequest("Trajet introuvable");
+
+            if (ing.ConducteurId != conducteurId)
+                return BadRequest("Le Trajet est sur un autre conducteur");
+
+            if (await _trajetRepository.Delete(ing.TrajetId))
+                return Ok("Trajet retirer");
+
+            return BadRequest("Oh oh ... des problèmes");
+        }
+
+
     }
 }
